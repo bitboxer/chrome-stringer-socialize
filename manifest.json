@@ -1,0 +1,21 @@
+{
+  "name": "Stringer Socialize",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Adding social features to stringer.",
+  "icons": { 
+      "16": "images/stringer16.png",
+      "48": "images/stringer48.png",
+      "128":"images/stringer128.png"
+  },
+  "permissions": [
+      "tabs",
+      "storage"
+  ],
+  "content_scripts": [ {
+     "js": [ "javascript/jquery.min.js", "javascript/content.js" ],
+     "matches": [ "http://*/*", "https://*/*" ],
+     "all_frames": true
+  } ],
+  "options_page": "html/options.html"
+}
