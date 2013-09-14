@@ -4,12 +4,12 @@
   "manifest_version": 2,
   "description": "Adding social features to stringer.",
   "icons": { 
-      "16": "images/stringer16.png",
-      "48": "images/stringer48.png",
-      "128":"images/stringer128.png"
+      "16": "images/stringer_16.png",
+      "48": "images/stringer_48.png",
+      "128": "images/stringer_128.png"
   },
   "web_accessible_resources": [
-    "images/stringer16.png"
+    "images/readability_16.png"
   ],
   "permissions": [
       "tabs",
