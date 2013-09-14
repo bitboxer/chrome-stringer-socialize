@@ -8,12 +8,17 @@
       "48": "images/stringer48.png",
       "128":"images/stringer128.png"
   },
+  "web_accessible_resources": [
+    "images/stringer16.png"
+  ],
   "permissions": [
       "tabs",
-      "storage"
+      "storage",
+      "http://www.readability.com/"
   ],
   "content_scripts": [ {
      "js": [ "javascript/jquery.min.js", "javascript/content.js" ],
+     "css": ["css/inline.css"],
      "matches": [ "http://*/*", "https://*/*" ],
      "all_frames": true
   } ],
