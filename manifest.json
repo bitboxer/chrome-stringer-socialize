@@ -17,10 +17,11 @@
       "http://www.readability.com/"
   ],
   "content_scripts": [ {
-     "js": [ "javascript/jquery.min.js", "javascript/content.js" ],
+     "js": ["javascript/jquery.min.js", "javascript/content.js"],
      "css": ["css/inline.css"],
-     "matches": [ "http://*/*", "https://*/*" ],
+     "matches": ["http://*/*", "https://*/*"],
      "all_frames": true
   } ],
+  "background": { "scripts": [ "javascript/background.js" ] },
   "options_page": "html/options.html"
 }
