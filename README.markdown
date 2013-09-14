@@ -1,4 +1,4 @@
-# Social Addon for Stringer
+# Social Add-on for Stringer
 
 [Stringer](https://github.com/swanson/stringer) is a really great RSS Reader. The only
 thing that is missing are a few features to third party services like 
