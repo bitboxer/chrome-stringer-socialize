@@ -9,7 +9,8 @@
       "128": "images/stringer_128.png"
   },
   "web_accessible_resources": [
-    "images/readability_16.png"
+    "images/readability_16.png",
+    "javascript/jquery-2.0.3.min.map"
   ],
   "permissions": [
       "tabs",
