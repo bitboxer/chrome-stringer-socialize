@@ -4,7 +4,7 @@ $(function() {
   function redraw() {
     $(".js-urls").empty();
     urls.forEach(function(item, idx) {
-      $(".js-urls").append("<li>" + item + " <a href='#' class='js-delete' data-id='" + idx +"'>Remove</a></li>");
+      $(".js-urls").append("<li>" + item + " <a href='#' class='js-delete' data-id='" + idx +"'>remove</a></li>");
     });
     $(".js-delete").click(function() {
       deleteUrl(parseInt($(this).attr("data-id"), 10));

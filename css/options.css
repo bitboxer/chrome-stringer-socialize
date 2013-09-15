@@ -1,0 +1,22 @@
+h1, h2, h3 {
+  color: #484948;
+}
+
+body {
+  background-color: #FAF2E5;
+}
+
+.content {
+  width: 560px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: Lato, sans-serif;
+}
+
+.content a {
+  color: #F59745;
+}
+
+.content form input {
+  width: 200px;
+}
