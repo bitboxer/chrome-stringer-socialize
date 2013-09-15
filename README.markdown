@@ -1,5 +1,7 @@
 # Social Add-on for Stringer
 
+## What is this?
+
 [Stringer](https://github.com/swanson/stringer) is a really great RSS Reader. The only
 thing that is missing are a few features to third party services like 
 [Readability](http://www.readability.com). 
@@ -13,6 +15,8 @@ Currently this plugin adds the following feature:
 * Readability Text extraction
 
 If you miss another service or feature, please send me a pull request or open
-a ticket on this repo.
+a [ticket](https://github.com/bitboxer/chrome-stringer-socialize/issues) on this repo.
 
-Thanks!
+## Installation
+
+You can install this extension from the [chrome webstore](https://chrome.google.com/webstore/detail/stringer-socialize/nbjjbkdnjmfagkikbnppocjiocbboafe).
