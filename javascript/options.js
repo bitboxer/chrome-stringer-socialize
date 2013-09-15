@@ -7,7 +7,7 @@ $(function() {
       $(".js-urls").append("<li>" + item + " <a href='#' class='js-delete' data-id='" + idx +"'>Remove</a></li>");
     });
     $(".js-delete").click(function() {
-      deleteUrl(parseInt($(this).attr("data-id")));
+      deleteUrl(parseInt($(this).attr("data-id"), 10));
     });
   }
 
