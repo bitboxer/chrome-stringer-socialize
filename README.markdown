@@ -10,7 +10,7 @@ I totally understand that those services are left out because of a design decisi
 the creator, but that does not mean we can't add those features through a chrome
 extension :) .
 
-Currently this plugin adds the following feature:
+Currently this extension adds the following feature:
 
 * Readability Text extraction
 
