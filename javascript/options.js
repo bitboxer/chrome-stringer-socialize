@@ -3,12 +3,18 @@ $(function() {
 
   function redraw() {
     $(".js-urls").empty();
-    urls.forEach(function(item, idx) {
-      $(".js-urls").append("<li>" + item + " " +
-                           "<a href='#' class='js-delete delete' data-id='" + idx +"'>"+
+    if (urls.length > 0) {
+      urls.forEach(function(item, idx) {
+        $(".js-urls").append("<li>" + item + " " +
+                             "<a href='#' class='js-delete delete' data-id='" + idx +"'>"+
                              "<i class='icon-remove' aria-label='remove entry'></i>"+
-                           "</a></li>");
-    });
+                             "</a></li>");
+      });
+      $(".empty").hide();
+    } else {
+      $(".empty").show();
+    }
+
     $(".js-delete").click(function() {
       deleteUrl(parseInt($(this).attr("data-id"), 10));
     });
