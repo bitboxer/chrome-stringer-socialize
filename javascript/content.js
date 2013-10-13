@@ -1,4 +1,5 @@
-chrome.extension.sendRequest({method: "getStringerURLs"}, function(response) {
+chrome.extension.sendRequest({method: "getSettings"}, function(response) {
+  console.log(response);
   response.urls.forEach(function(url) {
     if (window.location.href.match("http(s)?://" + url + ".*")) {
 
@@ -35,7 +36,9 @@ chrome.extension.sendRequest({method: "getStringerURLs"}, function(response) {
       }
 
       $(".story-body-container").each(function(idx, el) {
-        addReadability(el);
+        if (response.settings.checkbox_readability) {
+          addReadability(el);
+        }
       });
 
     }

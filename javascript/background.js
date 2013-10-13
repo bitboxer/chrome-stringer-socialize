@@ -9,10 +9,11 @@ function install_notice() {
 install_notice();
 
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-  if (request.method == "getStringerURLs") {
-    sendResponse({urls: [
-      JSON.parse(localStorage.getItem("urls"))
-    ]});
+  if (request.method == "getSettings") {
+    sendResponse({
+      urls: [JSON.parse(localStorage.getItem("urls"))],
+      settings: JSON.parse(localStorage.getItem("settings"))
+    });
   } else {
     sendResponse({});
   }

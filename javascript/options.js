@@ -1,7 +1,8 @@
 $(function() {
   var urls = [];
+  var settings = {};
 
-  function redraw() {
+  function redrawUrls() {
     $(".js-urls").empty();
     if (urls.length > 0) {
       urls.forEach(function(item, idx) {
@@ -20,33 +21,58 @@ $(function() {
     });
   }
 
-  function load() {
+  function parseStorage(key, defaultvalue) {
+    var item = defaultvalue;
     try {
-      urls = JSON.parse(localStorage.getItem("urls"));
+      if (localStorage.getItem(key) != null) {
+        item = JSON.parse(localStorage.getItem(key));
+      }
     } catch(e) {
-      urls = [];
+      item = defaultvalue;
     }
+    return item;
+  }
+
+  function load() {
+    urls = parseStorage("urls", []);
+    settings = parseStorage("settings", {});
   }
 
   function save() {
     localStorage.setItem("urls", JSON.stringify(urls));
+    localStorage.setItem("settings", JSON.stringify(settings));
   }
 
   function addUrl(url) {
     url = url.match("(?:http(?:s)?://)?(.*)")[1];
     urls.push(url);
     save();
-    redraw();
+    redrawUrls();
   }
 
   function deleteUrl(item) {
     urls.splice(item, 1);
     save();
-    redraw();
+    redrawUrls();
+  }
+
+  function initCheckboxes() {
+    $.each(settings, function(key) {
+      match = key.match(/checkbox_(.*)/)
+      if (match) {
+        $("#"+match[1]).prop( "checked", settings[key] );
+      }
+    });
   }
 
   load();
-  redraw();
+  redrawUrls();
+  initCheckboxes();
+
+  $("input[type=checkbox]").change(function() {
+    settings["checkbox_" + $(this).attr("id")] = $(this).is(":checked");
+    save();
+  });
 
   $(".add-button").click(function() {
     addUrl($(".add-url").val());
