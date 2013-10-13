@@ -12,7 +12,8 @@ extension :) .
 
 Currently this extension adds the following feature:
 
-* Readability Text extraction
+* Readability
+* Twitter
 
 If you miss another service or feature, please send me a pull request or open
 a [ticket](https://github.com/bitboxer/chrome-stringer-socialize/issues) on this repo.
