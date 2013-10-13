@@ -2,32 +2,36 @@
   <head>
     <title>Stringer Social - Options</title>
 
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/options.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
     <script type="text/javascript" src="../javascript/jquery.min.js"></script>
     <script type="text/javascript" src="../javascript/options.js"></script>
   </head>
   <body>
     <div class="content">
       <h1>Stringer Socialize</h1>
-      <p>This extension will add additional functionality to stringer. Currently it adds:</p>
-      <ul>
-        <li>Get full text with the help of <a href="http://www.readability.com">readability.com</a></li>
+      <p>
+        To have this extension working it needs to know the location of your stringer installation.
+      </p>
+      <ul class="urls js-urls">
       </ul>
+      <form action="#">
+        <input type="text" class="add-url" placeholder="http://stringer.example.com"/>
+        <button type="submit" class="add-button button">Add</button>
+      </form>
+
+      <h2>Features</h2>
+
+      <div>
+        <input type="checkbox" id="readability"/> <label for="readability">Readability</label>
+      </div>
+
       <p>
         If you want to have more features, please open an issue or create a pull request on the
         <a href="http://github.com/bitboxer/chrome-stringer-socialize">github page</a> of this
         project.
       </p>
-      <h2>Configuration</h2>
-      <p>
-        To have this extension working it needs to know the location of your stringer installation.
-      </p>
-      <ul class="js-urls">
-      </ul>
-      <form action="#">
-        <input type="text" class="add-url" placeholder="http://stringer.example.com"/>
-        <button type="submit" class="add-button">Add</button>
-      </form>
     </div>
   </body>
 </html>

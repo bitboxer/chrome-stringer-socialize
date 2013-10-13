@@ -20,3 +20,9 @@ a [ticket](https://github.com/bitboxer/chrome-stringer-socialize/issues) on this
 ## Installation
 
 You can install this extension from the [chrome webstore](https://chrome.google.com/webstore/detail/stringer-socialize/nbjjbkdnjmfagkikbnppocjiocbboafe).
+
+## License
+
+This project is licensed under MIT.
+
+Font Awesome by Dave Gandy - http://fontawesome.io
