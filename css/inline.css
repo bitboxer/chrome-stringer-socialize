@@ -1,3 +1,8 @@
 .story-readability {
+  float: left;
   margin-right: 20px;
+}
+
+.story-readability img {
+  margin-right: 5px;
 }
